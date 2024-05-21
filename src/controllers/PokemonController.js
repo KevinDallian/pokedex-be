@@ -1,4 +1,4 @@
-import { fibonacci, isPrime } from "../utils/MathUtils.js";
+import { fibonacci } from "../utils/MathUtils.js";
 
 class PokemonController {
     constructor(){
@@ -12,8 +12,7 @@ class PokemonController {
 
     releasePokemon(req, res) {
         const number = Math.floor(Math.random() * 100 + 1);
-        const success = isPrime(number);
-        return res.status(200).json({ success });
+        return res.status(200).json({ number });
     }
 
     renamePokemon(req, res) {
